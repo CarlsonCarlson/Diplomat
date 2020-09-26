@@ -34,7 +34,7 @@ public class UserService implements UserServiceInterface{
 			user.setMiddleName(temp_user.getMiddleName());
 			user.setPassword(temp_user.getPassword());
 			user.setUsername(temp_user.getUsername());
-			user.setMediator(temp_user.getMediator());
+			user.setMediator(temp_user.isMediator());
 			return userRepo.save(user);
 		}
 		else {
