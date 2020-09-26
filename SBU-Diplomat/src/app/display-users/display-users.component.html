@@ -10,15 +10,17 @@
               <th>Last Name</th>
               <th>Email</th>
               <th>Gender</th>
+              <th>Am I Mediator?</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let user of users">
-                 <td>{{user.firstName}}</td>
+                <td>{{user.firstName}}</td>
                 <td>{{user.middleName}}</td>
                 <td>{{user.lastName}}</td>
                 <td>{{user.email}}</td>
                 <td>{{user.gender}}</td> 
+                <td>{{user.mediator}}</td>
             </tr>
           </tbody>
     </table>  
