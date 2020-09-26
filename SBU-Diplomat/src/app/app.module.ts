@@ -21,6 +21,8 @@ import { DisplayUsersComponent } from './display-users/display-users.component';
 import { TestComponent } from './test/test.component';
 import { UserService } from './user-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { HttpClientModule } from '@angular/common/http';
     MediatorDashboardComponent,
     MediatorDiplomatMiniFormComponent,
     DisplayUsersComponent,
-    TestComponent
+    TestComponent,
+    RegisterComponent,
+    HomeComponent
   ],
 
   imports: [
@@ -45,7 +49,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', redirectTo: '/login', pathMatch: 'full' },
+      { path: '', component:HomeComponent },
       { path: 'login', component: LoginComponent},
       { path: 'form1', component: Form1Component},
       { path: 'form2', component: Form2Component},

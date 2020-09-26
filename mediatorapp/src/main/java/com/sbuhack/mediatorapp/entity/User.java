@@ -28,12 +28,12 @@ public class User{
 	@Column
 	private String email;
 	@Column
-	private boolean isMediator;
+	private  int isMediator;
 	
-	public boolean isMediator() {
+	public int isMediator() {
 		return isMediator;
 	}
-	public void setMediator(boolean isMediator) {
+	public void setMediator(int isMediator) {
 		this.isMediator = isMediator;
 	}
 	public String getEmail() {
@@ -82,7 +82,7 @@ public class User{
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public User(String username, String password, String firstName, String lastName, char gender, String middleName, String email, boolean isMediator) {
+	public User(String username, String password, String firstName, String lastName, char gender, String middleName, String email, int isMediator) {
 		super();
 		this.username = username;
 		this.password = password;
