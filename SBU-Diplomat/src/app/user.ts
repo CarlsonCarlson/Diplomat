@@ -6,4 +6,7 @@ export class User {
     lastName:string;
     gender:string;
     email:string;
+    mediator:boolean;
+
+    constructor(username:string, password:string, firstName:string, middleName:string, lastName:string, gender:string, email:string, mediator:boolean){}
 }
