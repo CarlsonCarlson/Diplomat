@@ -7,7 +7,12 @@ import {User} from './user';
 })
 export class UserService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    this.loggedIn = false;
+    this.username = '';
+  }
+  public loggedIn = false;
+  public username = '';
   apiURL = "http://localhost:8080/users";
 
   public createUser(user: Object){
@@ -31,4 +36,7 @@ export class UserService {
     return this.http.get(`${this.apiURL}/${username}`);
   }
 
+  register(user: User): Observable<User[]>{
+    return this.http.post<User[]>("http://localhost:8080/users", user);
+  }
 }
