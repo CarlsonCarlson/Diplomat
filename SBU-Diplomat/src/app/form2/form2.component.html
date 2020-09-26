@@ -1,1 +1,40 @@
-<p>form2 works!</p>
+
+<div class="forms-container">
+
+  
+    <h1>Reply Form</h1>
+
+    <form (ngSubmit)="onSubmit()" #form1="ngForm">
+
+        <div class="form-group">
+            <label for="question1">Describe one thing you like or appreciate about the other person.</label>
+            <input type="text" class="form-control" id="question1"
+            required [(ngModel)]="model.question1" name="question1">
+        </div>
+
+        <div class="form-group">
+            <label for="question2">What is your response to the other person's feelings?</label>
+            <input type="text" class="form-control" id="question2"
+            required [(ngModel)]="model.question2" name="question2">
+        </div>
+
+        <div class="form-group">
+            <label for="question3">Describe the emotions that you felt using "I" language.</label>
+            <input type="text" class="form-control" id="question3"
+            required [(ngModel)]="model.question3" name="question3">
+        </div>
+
+        <div class="form-group">
+            <label for="question4">Which actions or compromises would you be 
+                willing to undertake to resolve this conflict?</label>
+            <input type="text" class="form-control" id="question4"
+            required [(ngModel)]="model.question4" name="question4">
+        </div>
+
+        <button type="submit" class="btn btn-success" 
+         [disabled]="!form1.valid">Submit</button>
+
+    </form>
+    
+</div>
+
