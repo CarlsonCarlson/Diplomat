@@ -9,9 +9,7 @@ import { Form1 } from '../form1';
 })
 export class Form1Component implements OnInit {
 
-  yesNo = ['', 'Yes', 'No'];
-
-  model = new Form1(1, '', '', '', '', '', this.yesNo[0]);
+  model = new Form1(1, '', '', '', '', '', '');
 
   submitted = false;
 
@@ -20,6 +18,10 @@ export class Form1Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  newForm() {
+    this.model = new Form1(1, '', '', '', '', '', '');
   }
 
 }

@@ -7,7 +7,7 @@ export class Form1 {
         public question3: string,
         public question4: string,
         public question5: string,
-        public yesNo: string
+        public question6: string
     ) { }
 
 }

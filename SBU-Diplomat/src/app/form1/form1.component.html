@@ -1,46 +1,49 @@
 
 <div class="forms-container">
 
+  
     <h1>Conflict Resolution Form</h1>
+
     <form (ngSubmit)="onSubmit()" #form1="ngForm">
 
-        <p>In one sentence, describe the source of the conflict.</p>
-        <input type="text" class="form-control" id="question1"
-            required
-            [(ngModel)]="model.question1" name="question1">
-            TODO: remove this: {{model.question1}}
-        
-        <p>Describe on thing you like or appreciate about the other person.</p>
-        <input type="text" class="form-control" id="question2"
-            required
-            [(ngModel)]="model.question2" name="question2">
-            TODO: remove this: {{model.question2}}
-        
-        <p>Describe the problematic behavior.</p>
-        <input type="text" class="form-control" id="question3"
-            required
-            [(ngModel)]="model.question3" name="question3">
-            TODO: remove this: {{model.question3}}
-        
-        <p>Describe the emotions that you felt using "I" language.</p>
-        <input type="text" class="form-control" id="question4"
-            required
-            [(ngModel)]="model.question4" name="question4">
-            TODO: remove this: {{model.question4}}
-        
-        <p>What needs to happen for the conflict to resolve?</p>
-        <input type="text" class="form-control" id="question5"
-            required
-            [(ngModel)]="model.question5" name="question5">
-            TODO: remove this: {{model.question5}}
-        
-        <p>When would you like to notify the other party?</p>
         <div class="form-group">
-            <label for="yesNo">Yes or No</label>
-            <select class="form-control" id="yesNo" required>
-                <option *ngFor="let yes of yesNo" [value]="yes">{{yes}}</option>
-            </select>
+            <label for="question1">In one sentence, describe the source of the conflict.</label>
+            <input type="text" class="form-control" id="question1"
+            required [(ngModel)]="model.question1" name="question1" #question1="ngModel">
         </div>
+
+        <div class="form-group">
+            <label for="question2">Describe on thing you like or appreciate about the other person.</label>
+            <input type="text" class="form-control" id="question2"
+            required [(ngModel)]="model.question2" name="question2">
+        </div>
+
+        <div class="form-group">
+            <label for="question3">Describe the problematic behavior.</label>
+            <input type="text" class="form-control" id="question3"
+            required [(ngModel)]="model.question3" name="question3">
+        </div>
+
+        <div class="form-group">
+            <label for="question4">Describe the emotions that you felt using "I" language.</label>
+            <input type="text" class="form-control" id="question4"
+            required [(ngModel)]="model.question4" name="question4">
+        </div>
+
+        <div class="form-group">
+            <label for="question5">What needs to happen for the conflict to resolve?</label>
+            <input type="text" class="form-control" id="question5"
+            required [(ngModel)]="model.question5" name="question5">
+        </div>
+
+        <div class="form-group">
+            <label for="question6">When would you like to notify the other party?</label>
+            <input type="text" class="form-control" id="question6"
+            required [(ngModel)]="model.question6" name="question6">
+        </div>
+
+        <button type="submit" class="btn btn-success" 
+         [disabled]="!form1.valid">Submit</button>
 
     </form>
     
