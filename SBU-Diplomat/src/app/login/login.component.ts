@@ -29,4 +29,5 @@ export class LoginComponent implements OnInit {
       console.log(this.userService.username)
 		})
   }
+  aFunction() { console.log("test");}
 }
