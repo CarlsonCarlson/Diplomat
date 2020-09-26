@@ -1,0 +1,24 @@
+<div class="diplomat-container">
+    <div class="dip-header">
+        <div class="logo">
+            <img class="logo" src="assets/images/icon-logo.png"
+             alt="image fail"/>
+        </div>
+        <h3 class="diplomat">Diplomat</h3>
+        <div class="settings-profile-container">
+            <img class="settings-profile" src="assets/images/icon-settings.png"
+             alt="image fail" (click)="aFunction()"/>
+            <img class="settings-profile" src="assets/images/icon-default-profile.png"
+             alt="image fail" (click)="aFunction()"/>
+        </div>
+    </div>
+
+    <div class="info-container">
+        <p id="topleft">Conflict: {{conflictName}}</p>
+        <p id="topright">Names: {{person1Name}}, {{person2Name}}</p>
+        <p id="botleft">Conflict Status: {{conflictStatus}}</p>
+        <p id="botright">Deadline: {{deadline}}</p>
+    </div>
+
+    <a class="edit">Edit</a>
+</div>

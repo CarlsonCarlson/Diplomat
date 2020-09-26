@@ -1,0 +1,136 @@
+
+p {
+    margin: 0px;
+    position: relative;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.diplomat-container {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    margin: 20px;
+    border: 2px solid rgb(90, 9, 90);
+    border-radius: 5px;
+    height: 900px;
+    width: 700px;
+    background: linear-gradient(to bottom, #fdf6ff 5%, #fee5ff 100%);
+}
+
+.dip-header {
+    margin: -2px;
+    border-radius: 5px;
+    border: 2px solid rgb(90, 9, 90);
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, #d7bdfa 5%, #ea80e1 100%);
+}
+
+.logo {
+    width: 47px;
+    height: 47px;
+    position: relative;
+    float: left;
+    top: 50%;
+    transform: translate(0,-50%);
+    padding-left: 3px;
+}
+
+.diplomat {
+    left: 10px;
+    margin: 0;
+    font-weight: 500;
+    top: 50%;
+    transform: translate(0,-50%);
+    float: left;
+    position: relative;
+    padding-left: 10px;
+    font-size: 30px;
+}
+
+.settings-profile-container {
+    margin: 2px;
+    height: 56px;
+    width: 100px;
+    float: right;
+}
+
+.settings-profile {
+    width: 39px;
+    height: 39px;
+    position: relative;
+    float: left;
+    top: 50%;
+    transform: translate(0,-50%);
+    padding-left: 7px;
+}
+
+.settings-profile:hover {
+    left: 1px;
+    cursor: pointer;
+}
+
+.settings-profile:active {
+    left: -1px;
+}
+
+.info-container {
+    position: relative;
+    top: 5px;
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.edit {
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+    background-color: #dbc5d9;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    cursor: pointer;
+    color: #645862;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+    outline: 0;
+    position: relative;
+    float: right;
+    right: 10px;
+}
+
+#topleft {
+    float: left;
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+    top: 5%;
+    left: 5%;
+}
+
+#topright {
+    float: right;
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+    top: 5%;
+    right: 10%;
+}
+
+#botleft {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    float: left;
+}
+
+#botright {
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    float: right;
+}
