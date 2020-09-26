@@ -14,6 +14,8 @@ import { Form2Component } from './form2/form2.component';
 import { User1Component } from './user1/user1.component';
 import { User2Component } from './user2/user2.component';
 import { MediatorComponent } from './mediator/mediator.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { UserDiplomatMiniFormComponent } from './user-diplomat-mini-form/user-diplomat-mini-form.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { MediatorComponent } from './mediator/mediator.component';
     Form2Component,
     User1Component,
     User2Component,
-    MediatorComponent
+    MediatorComponent,
+    UserDashboardComponent,
+    UserDiplomatMiniFormComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,7 @@ import { MediatorComponent } from './mediator/mediator.component';
       { path: 'temp', component: TempComponent},
       { path: 'form1', component: Form1Component},
       { path: 'form2', component: Form2Component},
-      { path: 'user1', component: User1Component},
+      { path: 'user-dashboard', component: UserDashboardComponent},
       { path: 'user2', component: User2Component},
       { path: 'mediator', component: MediatorComponent},
     ])
