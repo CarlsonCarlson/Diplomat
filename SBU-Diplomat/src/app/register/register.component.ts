@@ -2,31 +2,35 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import {UserService} from '../user-service.service';
 import { Router } from '@angular/router';
-import { FormGroup, FormControl, Validators} from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
+import { first } from 'rxjs/operators';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  formdata;
-  constructor(public userService: UserService,private router:Router) { }
+  formdata: FormGroup;
+  constructor(public userService: UserService,private router:Router, private  formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    this.formdata = new FormGroup({
-			firstName: new FormControl("", Validators.required),
-			lastName: new FormControl("", Validators.required),
-			email: new FormControl("", Validators.required),
-      password: new FormControl("", Validators.required),
-      gender: new FormControl("", Validators.required)
-		});		
+    this.formdata = this.formBuilder.group({
+      username:['', Validators.required],
+      password:['', Validators.required],
+      email:['', Validators.required],
+      firstName:['',Validators.required],
+      middleName:['',Validators.required],
+      lastName:['',Validators.required],
+      gender:['',Validators.required]
+    })	;
   }
-  register(user): void
+  register(): void
 	{
-		var u = new User(user.username, user.pasword, user.firstName, user.middleName, user.lastName,user.gender,user.email,user.mediator);
-		this.userService.register(u).subscribe((data: {}) =>
+    this.userService.register(this.formdata.value)
+    .subscribe((data: {}) =>
 		{
 			this.router.navigate(['/']);
 		})
+
 	}
 }
