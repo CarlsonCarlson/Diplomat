@@ -1,1 +1,8 @@
-<p>Welcome to the Diplomats ;)</p>
+<div *ngIf="userService.loggedIn; else elseBlock">
+    Hi you are currently logged in!
+    <app-time-nav></app-time-nav>
+  </div>
+  
+  <ng-template #elseBlock>
+    <h1>Welcome to the diplomats, please login</h1>
+  </ng-template>

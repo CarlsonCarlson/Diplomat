@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../user';
 import {UserService} from '../user-service.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
-import { first } from 'rxjs/operators';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -29,7 +27,7 @@ export class RegisterComponent implements OnInit {
     this.userService.register(this.formdata.value)
     .subscribe((data: {}) =>
 		{
-			this.router.navigate(['/']);
+			this.router.navigate(['/login']);
 		})
 
 	}
