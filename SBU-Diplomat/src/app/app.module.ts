@@ -44,8 +44,41 @@ import { MediatorDiplomatMiniFormComponent } from './mediator-diplomat-mini-form
       { path: 'mediator-dashboard', component: MediatorDashboardComponent},
       { path: 'mediator', component: MediatorComponent},
     ])
+import { DisplayUsersComponent } from './display-users/display-users.component';
+import { TestComponent } from './test/test.component';
+import { UserService } from './user-service.service';
+import { HttpClientModule } from '@angular/common/http';
+@NgModule({
+  declarations: [
+    AppComponent,
+    DisplayUsersComponent,
+    TestComponent
+    NavBarComponent,
+    LoginComponent,
+    Form1Component,
+    Form2Component,
+    User1Component,
+    MediatorComponent,
+    UserDashboardComponent,
+    UserDiplomatMiniFormComponent,
+    MediatorDashboardComponent,
+    MediatorDiplomatMiniFormComponent
   ],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    RouterModule.forRoot([
+      { path: '', redirectTo: '/login', pathMatch: 'full' },
+      { path: 'login', component: LoginComponent},
+      { path: 'form1', component: Form1Component},
+      { path: 'form2', component: Form2Component},
+      { path: 'user-dashboard', component: UserDashboardComponent},
+      { path: 'mediator-dashboard', component: MediatorDashboardComponent},
+      { path: 'mediator', component: MediatorComponent},
+  ],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
