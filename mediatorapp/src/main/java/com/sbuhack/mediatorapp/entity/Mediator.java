@@ -15,8 +15,6 @@ public class Mediator {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Long id;
-	@OneToOne(mappedBy="mediator")
-	private User user;
 	@Column
 	private String certification;
 	@Column
@@ -38,17 +36,11 @@ public class Mediator {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Mediator(String certification,  String title, User user) {
+	public Mediator(String certification,  String title) {
 		super();
 		this.certification = certification;
 		this.title = title;
-		this.user = user;
 	}
-	public User getUser() {
-		return user;
-	}
-	public void setUser(User user) {
-		this.user = user;
-	}
+
 	
 }
