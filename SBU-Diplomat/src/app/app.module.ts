@@ -51,7 +51,8 @@ import { HttpClientModule } from '@angular/common/http';
       { path: 'form2', component: Form2Component},
       { path: 'user-dashboard', component: UserDashboardComponent},
       { path: 'mediator-dashboard', component: MediatorDashboardComponent},
-      { path: 'mediator', component: MediatorComponent},
+      { path: 'mediator', component: MediatorComponent}
+    ])
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
