@@ -6,4 +6,5 @@ export class User {
     lastName:string;
     gender:string;
     email:string;
+    mediator:boolean;
 }
