@@ -1,25 +1,16 @@
 package com.sbuhack.mediatorapp.entity;
 
-import java.io.Serializable;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name="User")
-public class User implements Serializable{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+public class User{
 	@Id
 	@GeneratedValue(generator = "uuid")
 	@GenericGenerator(name = "uuid", strategy = "uuid2")
@@ -36,14 +27,14 @@ public class User implements Serializable{
 	private char gender;
 	@Column
 	private String email;
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name="mediatorId", referencedColumnName="id")
-	private Mediator mediator;
-	public Mediator getMediator() {
-		return mediator;
+	@Column
+	private boolean isMediator;
+	
+	public boolean isMediator() {
+		return isMediator;
 	}
-	public void setMediator(Mediator mediator) {
-		this.mediator = mediator;
+	public void setMediator(boolean isMediator) {
+		this.isMediator = isMediator;
 	}
 	public String getEmail() {
 		return email;
@@ -91,7 +82,7 @@ public class User implements Serializable{
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public User(String username, String password, String firstName, String lastName, char gender, String middleName, String email, Mediator mediator) {
+	public User(String username, String password, String firstName, String lastName, char gender, String middleName, String email, boolean isMediator) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -100,7 +91,7 @@ public class User implements Serializable{
 		this.gender = gender;
 		this.middleName = middleName;
 		this.email = email;
-		this.mediator = mediator;
+		this.isMediator = isMediator;
 	}
 	
 }
