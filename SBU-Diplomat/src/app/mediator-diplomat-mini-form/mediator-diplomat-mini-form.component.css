@@ -7,14 +7,11 @@ p {
 }
 
 .diplomat-container {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%,0);
     margin: 20px;
     border: 2px solid rgb(90, 9, 90);
     border-radius: 5px;
-    height: 900px;
-    width: 700px;
+    height: 300px;
+    width: 300px;
     background: linear-gradient(to bottom, #fdf6ff 5%, #fee5ff 100%);
 }
 
@@ -78,9 +75,9 @@ p {
 .info-container {
     position: relative;
     top: 5px;
-    height: 50px;
-    width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    height: 200px;
+    width: 260px;
+    left: 20px;
 }
 
 .edit {
@@ -101,36 +98,4 @@ p {
     position: relative;
     float: right;
     right: 10px;
-}
-
-#topleft {
-    float: left;
-    position: relative;
-    margin-top: 0;
-    padding-top: 0;
-    top: 5%;
-    left: 5%;
-}
-
-#topright {
-    float: right;
-    position: relative;
-    margin-top: 0;
-    padding-top: 0;
-    top: 5%;
-    right: 10%;
-}
-
-#botleft {
-    position: absolute;
-    bottom: 5%;
-    left: 5%;
-    float: left;
-}
-
-#botright {
-    position: absolute;
-    bottom: 5%;
-    right: 10%;
-    float: right;
 }

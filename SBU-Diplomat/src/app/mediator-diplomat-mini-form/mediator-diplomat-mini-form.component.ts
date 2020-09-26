@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-mediator',
-  templateUrl: './mediator.component.html',
-  styleUrls: ['./mediator.component.css']
+  selector: 'app-mediator-diplomat-mini-form',
+  templateUrl: './mediator-diplomat-mini-form.component.html',
+  styleUrls: ['./mediator-diplomat-mini-form.component.css']
 })
-export class MediatorComponent implements OnInit {
+export class MediatorDiplomatMiniFormComponent implements OnInit {
 
   conflictName = "Chores";
   person1Name = "Suzy";
