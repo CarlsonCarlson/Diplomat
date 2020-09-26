@@ -17,42 +17,14 @@ import { UserDiplomatMiniFormComponent } from './user-diplomat-mini-form/user-di
 import { MediatorDashboardComponent } from './mediator-dashboard/mediator-dashboard.component';
 import { MediatorDiplomatMiniFormComponent } from './mediator-diplomat-mini-form/mediator-diplomat-mini-form.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    NavBarComponent,
-    LoginComponent,
-    Form1Component,
-    Form2Component,
-    User1Component,
-    MediatorComponent,
-    UserDashboardComponent,
-    UserDiplomatMiniFormComponent,
-    MediatorDashboardComponent,
-    MediatorDiplomatMiniFormComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    AppRoutingModule,
-    RouterModule.forRoot([
-      { path: '', redirectTo: '/login', pathMatch: 'full' },
-      { path: 'login', component: LoginComponent},
-      { path: 'form1', component: Form1Component},
-      { path: 'form2', component: Form2Component},
-      { path: 'user-dashboard', component: UserDashboardComponent},
-      { path: 'mediator-dashboard', component: MediatorDashboardComponent},
-      { path: 'mediator', component: MediatorComponent},
-    ])
 import { DisplayUsersComponent } from './display-users/display-users.component';
 import { TestComponent } from './test/test.component';
 import { UserService } from './user-service.service';
 import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
-    DisplayUsersComponent,
-    TestComponent
     NavBarComponent,
     LoginComponent,
     Form1Component,
@@ -62,8 +34,11 @@ import { HttpClientModule } from '@angular/common/http';
     UserDashboardComponent,
     UserDiplomatMiniFormComponent,
     MediatorDashboardComponent,
-    MediatorDiplomatMiniFormComponent
+    MediatorDiplomatMiniFormComponent,
+    DisplayUsersComponent,
+    TestComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
