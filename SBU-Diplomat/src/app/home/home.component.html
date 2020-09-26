@@ -1,6 +1,11 @@
-<div>
-    <div class = "home">
+
+<div *ngIf="userService.loggedIn; else elseBlock">
+    Hi you are currently logged in!
+    <app-time-nav></app-time-nav>
+  </div>
+  
+ <div class = "home">
        <h1 style= "color: #0082e6; text-align:center; font-size: '100';"> <label for = "h">Welcome To The Diplomats!</label>
 
     </h1></div>
-</div>
+

@@ -7,7 +7,12 @@ import {User} from './user';
 })
 export class UserService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    this.loggedIn = false;
+    this.username = '';
+  }
+  public loggedIn = false;
+  public username = '';
   apiURL = "http://localhost:8080/users";
 
   public createUser(user: Object){
