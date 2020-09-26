@@ -1,8 +1,11 @@
 package com.sbuhack.mediatorapp.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -22,7 +25,8 @@ public class User {
 	private char gender;
 	@Column
 	private String email;
-	@Column
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="mediatorId", referencedColumnName="id")
 	private Mediator mediator;
 	public Mediator getMediator() {
 		return mediator;
